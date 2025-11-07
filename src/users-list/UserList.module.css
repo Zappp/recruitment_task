@@ -1,0 +1,276 @@
+@import '../variables.css';
+
+.userlistSection {
+  background: var(--color-bg-primary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-xl);
+  position: relative;
+}
+
+.userlistSection h2 {
+  margin-top: 0;
+}
+
+.userlistSearchContainer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: var(--spacing-md);
+}
+
+.userlistSearch {
+  margin-bottom: 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 330px;
+  font-size: var(--font-size-base);
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-md);
+}
+
+.userlistSearch:focus {
+  outline: none;
+  border-color: var(--color-border-input-focus);
+}
+
+.userlistTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background: var(--color-bg-tertiary);
+  position: relative;
+}
+
+.userlistTable th {
+  background: var(--color-table-header-bg);
+  text-align: left;
+  padding: 10px 8px;
+}
+
+.userlistTable td {
+  border-top: 1px solid var(--color-table-row-border);
+  padding: 8px;
+  vertical-align: top;
+}
+
+.userlistLoadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-bg-overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-index-overlay);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+}
+
+.userlistEmptyState {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.userlistEditBtn {
+  padding: 4px 10px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+}
+
+.userlistEditBtn:hover {
+  background: var(--color-primary-dark);
+}
+
+.userlistEditBtn:disabled {
+  opacity: 0.7;
+  cursor: default;
+  background: var(--color-border-medium);
+}
+
+.userlistModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-bg-modal-overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-index-modal);
+}
+
+.userlistModal {
+  background: var(--color-bg-primary);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  min-width: 280px;
+}
+
+.userlistModal label {
+  position: relative;
+  display: block;
+  margin-top: 8px;
+  color: var(--color-text-primary);
+}
+
+.userlistModal input,
+.userlistModal select {
+  width: 100%;
+  padding: 6px;
+  font-size: var(--font-size-base);
+  margin-top: 3px;
+  margin-bottom: 8px;
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-md);
+}
+
+.userlistModal input:focus,
+.userlistModal select:focus {
+  outline: none;
+  border-color: var(--color-border-input-focus);
+}
+
+.userlistModalActions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.userlistModalActions button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-bg-primary);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+}
+
+.userlistModalActions button:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.userlistModalActions button:disabled {
+  opacity: 0.7;
+  cursor: default;
+  background: var(--color-border-medium);
+}
+
+.userlistError {
+  color: var(--color-error);
+}
+
+.userlistFieldError {
+  color: var(--color-error);
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  border-radius: var(--radius-md);
+}
+
+.userlistTableContainer {
+  position: relative;
+}
+
+.userlistTableWrapper {
+  min-height: 300px;
+}
+
+.userlistPagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .userlistSection {
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .userlistTable {
+    font-size: var(--font-size-sm);
+  }
+
+  .userlistTable th,
+  .userlistTable td {
+    padding: 6px 4px;
+  }
+
+  .userlistModal {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md);
+    max-width: calc(100% - var(--spacing-xl));
+  }
+
+  .userlistPagination {
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .userlistSection {
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+
+  .userlistSearchContainer {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .userlistSearch {
+    max-width: 100%;
+  }
+
+  .userlistTable {
+    font-size: 0.875rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .userlistTable th,
+  .userlistTable td {
+    padding: 4px 2px;
+    min-width: 80px;
+  }
+
+  .userlistModal {
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm);
+    max-width: calc(100% - var(--spacing-md));
+    min-width: auto;
+  }
+
+  .userlistModalActions {
+    flex-direction: column;
+  }
+
+  .userlistModalActions button {
+    width: 100%;
+  }
+
+  .userlistPagination {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .userlistPagination span {
+    font-size: var(--font-size-sm);
+  }
+}

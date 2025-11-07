@@ -1,0 +1,66 @@
+@import '../variables.css';
+
+.peselValidator {
+  padding: var(--spacing-xl);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--spacing-xl);
+}
+
+.peselValidator h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.peselInputLabel {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.peselInput {
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  width: 100%;
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-md);
+}
+
+.peselInput:focus {
+  outline: none;
+  border-color: var(--color-border-input-focus);
+  background: var(--color-border-input-focus-bg);
+}
+
+.peselSuccessMessage {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.peselErrorMessage {
+  color: var(--color-error);
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .peselValidator {
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .peselValidator {
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+}
