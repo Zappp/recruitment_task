@@ -1,7 +1,7 @@
 export const formErrorMessages = {
   INVALID_PESEL: 'Nieprawidłowy numer PESEL',
   INVALID_FILE_FORMAT: 'Plik musi być plikiem tekstowym (.txt)',
-  FILE_IS_TOO_LARGE: 'Plik nie może być większy niż 10MB',
+  FILE_IS_TOO_LARGE: 'Plik nie może być większy niż 1MB',
   FILE_LOAD_ERROR: 'Wystąpił błąd podczas wczytywania pliku',
   FILE_NOT_LOADED: 'Najpierw wczytaj plik tekstowy',
   NAME_REQUIRED: 'Imię i nazwisko jest wymagane',
